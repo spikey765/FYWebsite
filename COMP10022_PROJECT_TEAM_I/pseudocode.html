@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<title>pseudocode</title>
+<html lang="en">
+   
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>CThink</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link href="stylesheet.css" rel="stylesheet" type="text/css" />
+    <script type="module">
+        // https://mermaid.js.org/
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+</head>
+
+<script>
+    function ops(n){
+        descriptions = [
+            "A for loop is a programming construct utilized to execute a particular set of instructions a predetermined number of times. It begins with the keyword 'FOR', followed by a statement that specifies the number of iterations or the range of values over which the loop will operate. Within the loop, tasks are executed as defined by the programmer. Upon completion of all iterations, the loop concludes.",
+            "A while loop is another programming construct used to repeat a block of code as long as a specified condition is true. It begins with the keyword 'WHILE', followed by the condition that determines whether the loop should continue iterating. Inside the loop, tasks are performed as long as the condition remains true. Once the condition evaluates to false, the loop terminates, and program execution continues beyond the loop", 
+            "A do...until loop is a programming construct used to execute a block of code at least once, and then repeat it until a specified condition is true. It begins with the keyword 'DO', followed by the block of code to be executed. After the code block, there's the keyword 'UNTIL' followed by the condition that determines whether the loop should continue iterating. Inside the loop, tasks are performed until the condition becomes true.",
+        ];
+
+        images = [
+            "forloop.jpg",
+            "whiledoloop.jpg",
+            "dountilloop.jpg"
+            
+        ];
+        document.getElementById("opImg").src = images[n];
+        document.getElementById("opDesc").innerHTML = descriptions[n];
+    }
+</script>
+<style>
+      /* https://oxfordroadcorridor.com/the-university-of-manchester-ranked-first-in-the-uk-for-its-social-and-environmental-impact/ */
+
+      .parallax {
+        background-image: url("https://oxfordroadcorridor.com/wp-content/uploads/2020/04/UoM-ranked1st.jpg");
+        min-height: 40vw; 
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .space{
+        height: 2000px;
+    }
+
+    #title_text {
+        position: absolute;
+        top: 20vw;
+        left: 36%;
+        font-family: "Bebas Neue", sans-serif;
+        
+        color: #D9D9D9;
+        font-size: 8vw;
+    }
+
+    #intro{
+        text-align: center;
+        margin: 5vw;
+    }
+
+    .white{
+        transform: scale(1.01);
+        background-color: #e8e8e8;
+        border-style: dashed none;
+        text-align: center;
+    }
+
+    #examples{
+        text-align: center;
+        position: relative;
+        top: -4vw;
+        font-style: italic;
+    }
+
+    #description{
+        position: relative;
+        text-align: center;
+        margin: 3vw 5vw 0vw 5vw;
+        top: -3vw;
+    }
+    #line {
+        position: absolute;
+        width: 2px; 
+        height: 100px; 
+        background-color: black; 
+        z-index: -1; 
+    }
+    
+    #box {
+        position: absolute;
+        width: 100px; 
+        height: 50px; 
+        background-color: lightblue; 
+        border: 1px solid blue; 
+        text-align: center;
+        line-height: 50px; 
+        z-index: -1; 
+    }
+    .card-wrapper {
+        box-shadow: 0 15px 35px rgba(0,0,0,0.2),0 5px 15px rgba;
+    }
+
+    #left_block{
+    text-align: left;
+    position: relative;
+    margin-left: 10vw;
+    margin-right: 55%;
+}
+
+#right_block{
+    text-align: right;
+    position: relative;
+    margin-right: 10vw;
+    margin-left: 55%;
+}
+.operations .button {
+        background-color: #6193bf; /* Green */
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 1.5vw;
+        cursor: pointer;
+        /* float: left; */
+    }
+
+    .operations .button:hover {
+        background-color: #5c8bb4;
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 2vw 8vw 2vw 8vw;
+    }
+
+    .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
+
+</style>
+<body>
+    <div class="navbar">
+        <div id="bg_nav"></div>
+        <p id="left_navbar_text">{</p>
+        <ul class="ul_nav">
+          <li class="li_nav"> <a href="home.html">HOME</a> </li>
+          <li class="li_nav"> <a href="datatypes.html">DATATYPES</a></li>
+          <li class="li_nav"> <a href="pseudocode.html"PSEUDOCODE id="current">PSEUDOCODE</a></li>
+          <li class="li_nav"> <a href="graphs.html">GRAPHS</a> </li>
+        </ul>
+        <p id="right_navbar_text">}</p>
+    </div>
+    <div> 
+        <div id="parallax"></div>
+    </div>
+    <div id="title_text">Pseudocode</div>
+    <div class="parallax"></div>
+    <div id="intro">Pseudocode is used to construct algorithms in <b>basic terms</b>, to give <b>humans</b> an idea of what an algortihm's intended outcomes are. It contains <b>two</b> types of volcabulary: one is <b>conventional programming functions</b> e.g. loops & conditions, while the other is <b>informal but standard English</b> e.g. verbs and adjectives. Pseudocode can be interpreted by programmers and translated into a programming language. In this module, pseudocode can be presented as either standard English or as a flowchart. </div>
+    <div class="white">
+        <h1>Standards</h1>
+        <p id="Standards"> In this course, pseudocode has certain requirements which must be met in order to ensure that it can be reasonably understood <b>by humans</b>. These are consistency, clartiy, scope and brevity. Each has it's own importance to create effective and coherent pseudocode.</p>
+        <br>
+    </div>
+<div class="white">
+    <h1>Consistency</h1>
+    <p id="description">Consistency in pseudocode refers to <b>maintaining uniformity in the structure of instructions</b> throughout the code. Consistent pseudocode adheres to a set of conventions for formatting, naming, and only uses <b>acceptable volcabulary</b>. The overall effect is enhanced readability and comprehension for programmers due it being <b>easy to follow the logic and flow of the algorithm</b>, reducing the likelihood of errors due to misunderstandings. </p>
+   <figure class="annotated">
+    <div id="image-container"><h2 style="text-align:left"> Example: Project Allocation Algorithm</h2>
+        <div style="display: flex;">
+        <img src="pseudocode.jpg" height="2500vw" alt="Pseudocode Image">
+        <div class="line" style="top: 100px; left: 50px;"></div>
+        <div class="line" style="top: 150px; left: 120px;"></div>
+        <div class="box" style="top: 80px; left: 200px;"></div> 
+        <div class="box" style="top: 130px; left: 270px;"></div>
+        <figcaption>The following algorithm is used to allocate CS students to a coding project.<br><br>It can be called <b>consistent</b> due to the following features:<br><br>
+            <br<ul>
+                <li>It has <b>uniform variable names</b> e.g. students, projects</li>
+                <br>
+                <li>It contains two <b> iterative processes (loops)</b>, each of these serve a different purpose.</li>
+                <br>
+                <li>The only data strctures used are <b>clearly defined (sets and lists)</b></li>
+                <br>
+                <li>It uses acceptable vocabulary that is understandable for a<b> non-sepcialist reader</b>, e.g. allocate, reduce </li>
+                <br>
+                <li>Indentation is used to show the <b>logical program flow</b></li>
+            </ul>
+        </figcaption>
+        </div>
+    </div>
+   </figure>
+</div>
+<div class="white">
+<h1>Clarity</h1>
+    <p id="description">Pseudocode should be coherent for humans, so that they can be <b>easily interpreted and translated</b> into a programming language for a computer. If there are inputs or outputs in a description, it should be made clear what they are and any <b>additional conditions or assumptions </b> they require. Variables do not necessarily require declaration. Function calls and blocks of code, such as code contained within a loop, are often replaced by a one-line natural language sentence.</p>
+    <figure class="annotated">
+        <div id="image-container"><p><h2 style="text-align:left;">Example: Making an Omelette</p></h2>
+            <div style="display:flex;">
+            <img src="pseudocodeflowchart.jpg" height="3000vw" alt="Pseudocode Image">
+            <div class="line" style="top: 100px; left: 50px;"></div>
+            <div class="line" style="top: 150px; left: 120px;"></div>
+            <div class="box" style="top: 80px; left: 200px;"></div> 
+            <div class="box" style="top: 130px; left: 270px;"></div>
+            <figcaption>
+            The following algorithm is used as a recipe to create an omelette <br><br>It has <b>clarity</b> due to the following features:<br><br>
+             <br<ul>
+                <li>Variables are not <b>pre-declared</b>, instead simply introduced (as ingredients) through the algorithm</li>
+                <br>
+                <li>Instructions are defined in <b>squares</b>, conditions are defined in <b>diamonds</b> (the reader should already be aware of this property of flowcharts)</li>
+                <br>
+                <li><b>Operations</b> i.e. actions are clearly labelled and defined therefore are understood by the reader</li>
+                <br>
+                <li>The start <b>and termination</b> commands are connected by arrows showing the beginning and ending of the flow of the algorithm</li>
+                <br>
+                <li>Space between blocks is used to show the <b>logical program flow</b></li>
+            </ul>
+            </figcaption>
+            </div>
+        </div>
+    </figure>
+</div>
+<div class="white">
+    <h1>Scoping</h1>
+    <p id="description">When describing a pseudocode structure e.g a loop, it should be clear which
+        statements are <b>included in the loop</b>, i.e. which statements get <b>repeated</b>. This
+        could be done through explicit BEGIN/END structures, indentation or some
+        other mechanism. </p> 
+        <div class="container">
+            <div class="operations">
+                <button class="button" onclick="ops(0)">For Loops</button>
+                <button class="button" onclick="ops(1)">While Loops</button>
+                <button class="button" onclick="ops(2)">Do...Until Loops</button>
+            </div>
+        </div>
+        <img id="opImg" class="center">
+    <p id="opDesc" class="container"></p>
+</div>
+<div class="white">
+    <h1>Brevity</h1>
+    <p id="description"> <b>Abstraction</b> of irrelevant details is a key skill in this module, and can be applied to pseudocode. By avoiding unnecessary elaboration, brevity helps in streamlining the pseudocode, making it easier to identify the core logic and understand the algorithm's flow quickly. </p>
+    <figure class="annotated">
+        <div id="image-container"><p><h2 style="text-align:left;">Example: Solving a Maze</p></h2>
+            <div style="display:flex;">
+            <img src="maze.png.jpg" height="2500vw" alt="Pseudocode Image">
+            <div class="line" style="top: 100px; left: 50px;"></div>
+            <div class="line" style="top: 150px; left: 120px;"></div>
+            <div class="box" style="top: 80px; left: 200px;"></div> 
+            <div class="box" style="top: 130px; left: 270px;"></div>
+            <figcaption>
+                <br<ul>In order for an agent to solve a maze, the following specific details/assumptions are required.<br>
+                    <br>
+                    <li>The agent must begin at the entrance of the maze, and any algorithm should <b>terminate</b> when the end is reached. </li>
+                    <br>
+                    <li>Any space outside the maze is irrelevant, and should be <b>abstracted</b> from the problem specification</li>
+                    <br>
+                    <li>The agent's <b>method of movement</b> should be concisely declared.</li>
+                    <br>
+                    <li>Procedures when encounterting junctions and dead ends are necessary to traversing the maze.</li>
+                    <br>
+                    <li>An algorithm to solve the maze should attempt to solve the maze as swiftly as possible.</li>
+                </ul>
+            </ul>
+            </figcaption>
+            </div>
+        </div>
+    </figure>
+</div>
+<div class="bottombar">
+    <p>Created by 3 Foundation Year Computer Science (FYCS) students at the University of Manchester.</p>
+</div>
+</body>
+</html>

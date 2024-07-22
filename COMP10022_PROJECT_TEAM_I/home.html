@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>CThink</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link href="stylesheet.css" rel="stylesheet" type="text/css" />
+    <script type="module">
+        // https://mermaid.js.org/
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+</head>
+
+<style>
+h1{
+    font-family: "Bebas Neue", sans-serif;
+    text-align: center;
+    font-size: 6vw;
+    -webkit-text-stroke: 2px black;
+    color: #BBE8F2;
+}
+
+.container{
+    font-family: "Bebas Neue", sans-serif;
+    position: relative;
+    font-size: 6vw;
+    color: #D9D9D9;
+}
+
+#title_text {
+    position: absolute;
+    top: 18vw;
+    left: 25%;
+}
+
+#pop_slogo {
+    position: absolute;
+    font-size: 3vw;
+    font-family: 'Courier New', monospace;
+    top: 25vw;
+    left: 25%;
+    overflow: hidden; 
+    border-right: 0.4vw solid #F23030; 
+    white-space: nowrap; 
+    margin: 0 auto; 
+    animation: 
+        typing 2s steps(30, end),
+        blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 33% } 
+}
+  
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    20% { border-color: #F23030; }
+}
+
+#background_gif {
+    width: 98vw;
+    height: 45vw;
+    object-fit: cover;
+    border: 0.5vw solid #0D0D0D;
+}
+
+#space{
+    height: 2000px;
+}
+
+#blob {
+    text-align: center;
+    margin-left: 5vw;
+    margin-right: 5vw;
+}
+
+#left{
+    text-align: left;
+    top: 3vw;
+    margin-left: 15vw;
+    margin-right: 50%;
+}
+
+#right{
+    text-align: right;
+    top: 3vw;
+    margin-right: 15vw;
+    margin-left: 50%;
+}
+
+.white{
+    transform: scale(1.01);
+    padding: 3vw;
+    background-color: #e8e8e8;
+    border-style: dashed none;
+}
+
+.ILO{
+    margin-left: 15%;
+}
+
+#mindmap{
+    padding: 5vw 20vw 5vw 20vw;
+    background-color: #e8e8e8;
+    transform: scale(1.01);
+    border-style: dashed none;
+}
+
+#piechart{
+    position: relative;
+    top: -28vw;
+    margin-left: 5%;
+    margin-right: 50%;
+}
+
+#left_block{
+    text-align: left;
+    position: relative;
+    margin-left: 10vw;
+    margin-right: 55%;
+}
+
+#right_block{
+    text-align: right;
+    position: relative;
+    margin-right: 10vw;
+    margin-left: 55%;
+}
+</style>
+
+<body>
+<div class="container">
+    <img id="background_gif" src="https://i0.wp.com/studentnews.manchester.ac.uk/wp-content/uploads/2023/10/LonelinessOct23_Article3.gif?resize=600%2C360&ssl=1">
+    <b>
+        <div id="title_text" class="title">Computational Thinking</div>
+        <div id="pop_slogo" class="title">[Logic in action.]</div>
+    </b>
+</div>
+
+
+<div class="navbar">
+    <div id="bg_nav"></div>
+    <p id="left_navbar_text">{</p>
+    <ul class="ul_nav">
+      <li class="li_nav"> <a href="home.html" id="current">HOME</a> </li>
+      <li class="li_nav"> <a href="datatypes.html">DATATYPES</a> </li>
+      <li class="li_nav"> <a href="pseudocode.html">PSEUDOCODE</a> </li>
+      <li class="li_nav"> <a href="graphs.html">GRAPHS</a> </li>
+    </ul>
+    <p id="right_navbar_text">}</p>
+  </div>
+
+<div>
+    <h1>What is Computational Thinking?</h1>
+    <div id="blob">This unit aims to introduce students to Computational Thinking: the thought processes involved in formulating a problem and expressing its solution(s) in such a way that a computer—human or machine—can effectively carry it out. This is all about <b>Communication</b>. <br><br><em>How do we communicate our ideas to other people, to machines, or indeed communicate between machines?</em>
+    </div>
+</div>
+<br>
+
+<div class="white">
+    <p id="left"><b>Decomposition & Analysis</b><br>Decomposition is the process of breaking down a larger problem into smaller, much more manageable ones. Analysing the problem will give insights on how to tackle and decompose</p>
+    <p id="right"><b>Design & Refine</b><br>Design a prototype solution based upon the series of decomposed tasks. Test each solution against general and edge cases then refine at the end of each sprint</p>
+    <p id="left"><b>Present & Demonstrate</b><br>Once a final solution is found and working, the solution must be presented to be understood and carried out by humans or machines via flowcharts or pseudocode alike</p>
+    <p id="right"><b>Critique & Compare</b><br>Scrutinise the final solution to find faulty edge cases or infinite run times. Compare with other solutions and collaborate with peers to find the most optimum solution</p>
+</div>
+
+<div>
+    <h1>What Will I Learn?</h1>
+    <ul class="ILO">
+        <li>How to <b>decompose</b> a problem into a series of ordered steps</li>
+        <li>Being able to apply techniques such as <b>decomposition, abstraction, and generalisation</b> to problems</li> 
+        <li>How we describe computational <b>complexity</b> in an informal way</li>
+        <li>To explain how self-referential problems relate to the <b>limits</b> of computation</li>
+    </ul>
+</div>
+
+<br>
+
+<pre class="mermaid" id="mindmap">
+    mindmap
+    Algorithmic Thinking
+        Communication
+        Modelling
+        Scientific Thinking
+            Analyse
+            Modelling
+            Evaluate
+        Representation
+            Pseudocode
+            Flowcharts
+        Logical Thinking
+            Precision
+            Pedantry
+            Edge Cases
+        Pattern Matching
+            Abstraction
+            Generalisation
+            Decomposition
+            Evaluate
+
+</pre>
+
+<div>
+    <h1>How am I assessed?</h1>
+    <p style="margin-right: 5vw; margin-left: 50%;">At the end of the semester, you will sit an <b>exam worth 50%.</b> During the semester, you will be working with your assigned group to produce solutions to each block. These blocks count as <b>coursework worth 40%</b>. After each block, you will submit a buddy check for you and your team to rate each other based upon their contribution and team work. You will also write individual reflections to discuss how the block went - these <b>evaluations are worth 10%</b>. <br><br>You will partake in 6 blocks, each covering different topics previously mentioned. Each block lasts usually a week and you are expected to work with your groups outside of timetabled labs.</p>
+    <pre class="mermaid" id="piechart">
+        pie title Grading
+            "Assessment" : 50
+            "Block Coursework" : 40
+            "Reflections" : 10
+    </pre>
+    <br><br><br><br><br><br><br><br><br>
+    <p id="left_block" style="top: -25vw;"><b>Block 0</b><br>This block will introduce you to your groups and your lecturers. You will learn the basics of this module and what is expected of you. There will be a live session, videos and some suggested reading for you to complete. This block does not hold any weighting to the final grade.</p>
+    <p id="right_block" style="top: -41vw;"><b>Block 1</b><br>Block 1 is concerned with how to describe an algorithm. You will be given a maze and asked to create an algorithm to solve this maze for a human or computer to follow. This will give an experience of what the rest of the modules are like and is a formative piece of work.</p>
+    <p id="left_block" style="top: -35vw;"><b>Block 2</b><br>We look at further tools that help us create and describe algorithms, such as decomposing problems and algorithms, different kinds of loops, refinement, the idea of generalizing an algorithm that allows it to be applied to a problem and how to test and scrutinize your algorithm and its description.</p>
+    <p id="right_block" style="top: -53vw;"><b>Block 3</b><br>Abstraction is a technique that allows us to strip irrelevant detail from a problem, only retaining what is required to describe a solution. Doing this also allows us to apply the same algorithm to many different problems by realizing that they have a common abstraction. We will make use of graphs.</p>
+    <p id="left_block" style="top: -47vw;"><b>Block 4</b><br>We look at the complexity of both problems and algorithms, and we look at how we can count the number of steps our algorithm is going to take, for both particular examples as well as in general. You will examine example solutions from previous blocks for their complexity.</p>
+    <p id="right_block" style="top: -63vw;"><b>Block 5</b><br>Recursion is a technique for which a program can call a function or subroutine within itself and is a very powerful tool for algorithm design. You will learn to design a recursive algorithm and understand the time complexity that comes with it to find your solution.</p>
+    
+</div>
+<div class="white"><h1>Timeline of learning</h1></div>
+<div class="timeline">
+        <div class="outer">
+          <div class="card">
+            <div class="info">
+              <h3 class="title">Block 0: 18th Jan -- 31st Jan </h3>
+              <p>Introductory Lecture on 16th Jan <br>First Q&A on 23rd Jan<br>Reflection due 31st Jan</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="info">
+              <h3 class="title">Block 1: 1st Feb -- 14th Feb </h3>
+              <p>First Q&A on 6th Feb <br>Second Q&A on 13th Feb<br>Reflection due 16th Feb</br></p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="info">
+              <h3 class="title">Block 2: 15th Feb -- 28th Feb</h3>
+              <p>First Q&A on 20th Feb <br>Second Q&A on 27th Feb<br>Reflection due 1st Mar </p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="info">
+              <h3 class="title">Block 3: 29th Feb -- 13th Mar</h3>
+              <p>First Q&A on 7th Mar <br>Second Q&A on 14th Mar<br>Reflection due 15th Mar </p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="info">
+              <h3 class="title">Block 4: 14th Mar -- 17th Apr</h3>
+              <p>First Q&A on 11th Apr <br>Second Q&A on 18th Apr<br>Reflection due 19th Apr </p>    
+            </div>
+          </div>
+          <div class="card">
+            <div class="info">
+              <h3 class="title">Block 5:  18th Apr -- 1st May</h3>
+              <p>First Q&A on 23rd Apr<br>Second Q&A on 2nd May<br>Reflection due 3rd May </p>    
+            </div>
+          </div>
+          <div class="card">
+            <div class="info">
+              <h3 class="title">Computational Thinking Exam: 16th May 14:00 - 16:00</h3>
+              <p>Held in Kilburn 1.8/1.10</p>    
+            </div>
+          </div>
+        </div>
+      </div>
+
+    
+<div class="bottombar">
+    <p>Created by 3 Foundation Year Computer Science (FYCS) students at the University of Manchester.</p> 
+</div>
+</body>
+
+</html>

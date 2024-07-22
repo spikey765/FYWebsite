@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>CThink</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link href="stylesheet.css" rel="stylesheet" type="text/css" />
+</head>
+
+
+<style>
+      /* https://oxfordroadcorridor.com/the-university-of-manchester-ranked-first-in-the-uk-for-its-social-and-environmental-impact/ */
+
+    .parallax {
+        background-image: url("https://oxfordroadcorridor.com/wp-content/uploads/2020/04/UoM-ranked1st.jpg");
+        min-height: 40vw; 
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .space{
+        height: 2000px;
+    }
+
+    #title_text {
+        position: absolute;
+        top: 20vw;
+        left: 41%;
+        font-family: "Bebas Neue", sans-serif;
+        
+        color: #D9D9D9;
+        font-size: 8vw;
+    }
+
+    #intro{
+        text-align: center;
+        margin: 5vw;
+    }
+
+    .white{
+        transform: scale(1.01);
+        background-color: #e8e8e8;
+        border-style: dashed none;
+    }
+
+    #examples{
+        text-align: center;
+        position: relative;
+        top: -1vw;
+        font-style: italic;
+    }
+
+    #description{
+        position: relative;
+        text-align: center;
+        margin: 0vw 5vw 3vw 5vw;
+        top: 0vw;
+    }
+
+    .operations .button:hover {
+        background-color: #5c8bb4;
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 2vw 8vw 2vw 8vw;
+    }
+
+    .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
+</style>
+
+<body>
+    <div class="navbar">
+        <div id="bg_nav"></div>
+        <p id="left_navbar_text">{</p>
+        <ul class="ul_nav">
+          <li class="li_nav"> <a href="home.html">HOME</a> </li>
+          <li class="li_nav"> <a href="datatypes.html">DATATYPES</a> </li>
+          <li class="li_nav"> <a href="pseudocode.html">PSEUDOCODE</a> </li>
+          <li class="li_nav"> <a href="graphs.html" id="current">GRAPHS</a> </li>
+        </ul>
+        <p id="right_navbar_text">}</p>
+    </div>
+    <div> 
+        <div id="parallax"></div>
+    </div>
+    <div id="title_text">Graphs</div>
+    <div class="parallax"></div>
+    <div id="intro">Graphs represent a foundational concept in computer science, serving as a data structure for modeling relationships. Consisting of nodes (vertices) and edges, which denote connections between nodes, graphs provide a robust framework for problem-solving across computer science. Their versatility enables applications ranging from analyzing social networks to optimizing logistical routes.</div>
+    <div class="white">
+        <h1>The Basics</h1>
+        <p id="examples">Nodes & Edges</p>
+        <p id="description"><b>Nodes, also known as vertices, are the main components of a graph</b>. They represent individual entities within the graph. <b>Edges are the connections</b> or relationships between nodes. They depict the interactions or associations between the entities represented by the nodes. Together, nodes and edges form the building blocks of a graph, allowing for the representation and analysis of complex relationships and structures.</p>
+    </div>
+    <h1>Directions</h1>
+    <p id="examples">Directed & Undirected Graphs</p>
+    <p id="description">In <b>directed graphs, edges have a specified direction</b>, representing one-way relationships between nodes. <b>Undirected graphs lack directionality</b>, with edges denoting bidirectional connections between nodes, suitable for representing symmetric relationships.</p>
+    <img src="graphs1.png" style="display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;">
+    <br>
+    <div class="white">
+      <h1>Abstraction</h1>
+      <p id="examples">Within context of graphs</p>
+      <p id="description">Abstraction in graph theory involves representing relationships as nodes and edges, <b>simplifying real-world problems</b>. This simplification aids in problem-solving and analysis by <b>focusing on essential connections while disregarding irrelevant details.</b><br><br> For example, the Manchester tram lines can be abstracted into a graph by letting stops denote nodes on the graph whilst the edges be denoted by the real-world lines. Abstracting data such as geographical topology or landmarks help to simplify a graph like this to show only relevant data.</p>
+    </div>
+
+    <div class="bottombar">
+    <p>Created by 3 Foundation Year Computer Science (FYCS) students at the University of Manchester.</p> 
+</div>
+</body>
+
+</html>
